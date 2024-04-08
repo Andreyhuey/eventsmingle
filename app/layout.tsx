@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "EventsMingle",
   description: "Allows you to be able to create and book events",
   icons: {
-    icon: "/assets/images",
+    icon: "/assets/images/favicon.ico",
   },
 };
 
