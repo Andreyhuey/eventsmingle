@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import hero from "../../assets/images/hero.png";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -21,7 +22,7 @@ export default function Home() {
           </div>
 
           <Image
-            src={"/assets/images/hero.png"}
+            src={hero}
             alt="hero"
             width={1000}
             height={1000}
