@@ -10,6 +10,8 @@ This is a FullStack Nextjs Event ticket application
 
 [Shadcn](https://ui.shadcn.com/docs/installation/next) a UI library for faster development
 
+[React Hook Form](https://ui.shadcn.com/docs/components/form) Building forms with React Hook and Zod
+
 ### Clerk Docs
 
 [Clerk](https://clerk.com) for authentication and complete user management
