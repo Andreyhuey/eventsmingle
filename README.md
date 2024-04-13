@@ -26,6 +26,10 @@ This is a FullStack Nextjs Event ticket application
 
 [Serverless Functions](vercel.com/docs/functions/serverless-functions)Read about serverless function provided from vercel
 
+### Uploading Images in NextJs
+
+[Upload Thing](https://docs.uploadthing.com/) The easiest way to add file uploads to my full stack typescript application
+
 ## Project Source
 
 This are the sources from which i am learning this project
