@@ -19,7 +19,7 @@ import { eventFormSchema } from "@/lib/validator";
 import { eventDefaultValues } from "@/constants";
 import Dropdown from "./Dropdown";
 import { useState } from "react";
-import FileUploader from "./FileUploader";
+import { FileUploader } from "./FileUploader";
 
 type EventFormProps = {
   userId: String;
@@ -106,7 +106,7 @@ const EventForm = ({ userId, type }: EventFormProps) => {
             name="imageUrl"
             render={({ field }) => (
               <FormItem className="w-full">
-                <FormLabel>Title</FormLabel>
+                <FormLabel>Image</FormLabel>
                 <FormControl>
                   <FileUploader
                     onFieldChange={field.onChange}
