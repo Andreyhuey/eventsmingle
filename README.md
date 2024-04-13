@@ -1,16 +1,18 @@
-# EVENTSMINLGLE
+# WELCOME TO EVENTSMINLGLE
 
-# INTRODUCTION
+## INTRODUCTION
 
-This is a FullStack Nextjs Event ticket application
+This is a FullStack Typescript Nextjs Event ticketing application
 
 ## Tools
 
-### UI tool
+### UI tools
 
 [Shadcn](https://ui.shadcn.com/docs/installation/next) a UI library for faster development
 
 [React Hook Form](https://ui.shadcn.com/docs/components/form) Building forms with React Hook and Zod
+
+[React Date Picker](https://www.npmjs.com/package/react-datepicker) A simple and reusable datepicker component for react.
 
 ### Clerk Docs
 

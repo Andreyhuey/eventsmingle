@@ -20,6 +20,9 @@ import { eventDefaultValues } from "@/constants";
 import Dropdown from "./Dropdown";
 import { useState } from "react";
 import { FileUploader } from "./FileUploader";
+import { Calendar, MapPin } from "lucide-react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 type EventFormProps = {
   userId: String;
@@ -88,7 +91,7 @@ const EventForm = ({ userId, type }: EventFormProps) => {
             name="description"
             render={({ field }) => (
               <FormItem className="w-full">
-                <FormLabel>Title</FormLabel>
+                <FormLabel>Description</FormLabel>
                 <FormControl className="h-72">
                   <Textarea
                     placeholder="Description"
@@ -119,6 +122,85 @@ const EventForm = ({ userId, type }: EventFormProps) => {
             )}
           />
         </div>
+
+        <div className="flex flex-col gap-5 md:flex-row">
+          <FormField
+            control={form.control}
+            name="location"
+            render={({ field }) => (
+              <FormItem className="w-full">
+                <FormControl>
+                  <div className="flex-center overflow-hidden rounded-full bg-gray-50 px-4 h-[54px] w-full py-2">
+                    <MapPin className="bg-gray-50" />
+
+                    <Input
+                      placeholder="Event Location"
+                      {...field}
+                      className="input-field"
+                    />
+                  </div>
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </div>
+
+        <div className="flex flex-col gap-5 md:flex-row">
+          <FormField
+            control={form.control}
+            name="startDateTime"
+            render={({ field }) => (
+              <FormItem className="w-full">
+                <FormControl>
+                  <div className="flex-center overflow-hidden rounded-full bg-gray-50 px-4 h-[54px] w-full py-2">
+                    <Calendar className="bg-gray-50" />
+                    <p className="ml-3 whitespace-nowrap text-grey-500">
+                      Start Date:{" "}
+                    </p>
+                    <DatePicker
+                      selected={field.value}
+                      onChange={(date: Date) => field.onChange(date)}
+                      showTimeSelect
+                      timeInputLabel="Time:"
+                      dateFormat="dd/MM/yyyy h:mm aa"
+                      wrapperClassName="datePicker"
+                    />
+                  </div>
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <FormField
+            control={form.control}
+            name="endDateTime"
+            render={({ field }) => (
+              <FormItem className="w-full">
+                <FormControl>
+                  <div className="flex-center overflow-hidden rounded-full bg-gray-50 px-4 h-[54px] w-full py-2">
+                    <Calendar className="bg-gray-50" />
+                    <p className="ml-3 whitespace-nowrap text-grey-500">
+                      End Date:{" "}
+                    </p>
+                    <DatePicker
+                      selected={field.value}
+                      onChange={(date: Date) => field.onChange(date)}
+                      showTimeSelect
+                      timeInputLabel="Time:"
+                      dateFormat="dd/MM/yyyy h:mm aa"
+                      wrapperClassName="datePicker"
+                    />
+                  </div>
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        </div>
+
+        <div className="flex flex-col gap-5 md:flex-row"></div>
 
         <Button type="submit">Submit</Button>
       </form>
