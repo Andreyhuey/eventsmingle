@@ -45,6 +45,7 @@ const EventForm = ({ userId, type }: EventFormProps) => {
     defaultValues: initialValues,
   });
 
+  // defines what the submit button does
   function onSubmit(values: z.infer<typeof eventFormSchema>) {
     console.log(values);
   }
@@ -214,8 +215,8 @@ const EventForm = ({ userId, type }: EventFormProps) => {
             render={({ field }) => (
               <FormItem className="w-full">
                 <FormControl>
-                  <div className="flex-center  h-[54px] w-full overflow-hidden rounded-full bg-grey-50 px-4 py-2">
-                    <div className="flex items-center">
+                  <div className="flex-center justify-between  h-[54px] w-full overflow-hidden rounded-full bg-grey-50 px-4 py-2">
+                    <div className="flex items-center w-full">
                       <CircleDollarSign className="bg-gray-50" />
                       <Input
                         type="number"

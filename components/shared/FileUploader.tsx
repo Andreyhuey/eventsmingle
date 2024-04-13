@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, Dispatch, SetStateAction } from "react";
-import type { FileWithPath } from "@uploadthing/react";
+// import type { FileWithPath } from "@uploadthing/react";
 import { useDropzone } from "@uploadthing/react/hooks";
 import { generateClientDropzoneAccept } from "uploadthing/client";
 
@@ -19,7 +19,7 @@ export function FileUploader({
   onFieldChange,
   setFiles,
 }: FileUploaderProps) {
-  const onDrop = useCallback((acceptedFiles: FileWithPath[]) => {
+  const onDrop = useCallback((acceptedFiles: any) => {
     setFiles(acceptedFiles);
     onFieldChange(convertFileToUrl(acceptedFiles[0]));
   }, []);
@@ -49,7 +49,7 @@ export function FileUploader({
       ) : (
         <div className="flex-center flex-col py-5 text-grey-500">
           <img
-            src={`https://raw.githubusercontent.com/adrianhajdin/event_platform/main/public/assets/icons/upload.svg `}
+            src="/assets/icons/upload.svg"
             width={77}
             height={77}
             alt="file upload"
