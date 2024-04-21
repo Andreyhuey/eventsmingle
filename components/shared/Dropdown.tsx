@@ -70,7 +70,7 @@ const Dropdown = ({ value, onChangeHandler }: DropdownProps) => {
         {/* heavily reliant on a trigger, won't work otherwise */}
         <AlertDialog>
           <AlertDialogTrigger className="p-meduim-14 flex w-full rounded-sm py-3 pl-8 text-primary-500 hover:bg-primary-50 focus:text-primary-500">
-            Open
+            Add New Category
           </AlertDialogTrigger>
           <AlertDialogContent className="bg-white">
             <AlertDialogHeader>
