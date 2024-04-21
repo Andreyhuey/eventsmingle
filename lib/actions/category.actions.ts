@@ -19,13 +19,11 @@ export const createCategory = async ({
   }
 };
 
-export const getAllCategories = async ({
-  categoryName,
-}: CreateCategoryParams) => {
+export const getAllCategories = async () => {
   try {
     await connectToDatabase();
 
-    const categories = await Category.find({ name: categoryName });
+    const categories = await Category.find();
 
     return JSON.parse(JSON.stringify(categories));
   } catch (error) {
