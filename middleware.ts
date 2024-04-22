@@ -9,12 +9,9 @@ export default authMiddleware({
     "api/uploadthing",
     "/assets/images/favicon.ico",
     "/assets/images/dotteted-pattern.png",
-  ],
-  ignoredRoutes: [
-    "/api/webhook/clerk",
-    "/api/webhook/stripe",
     "api/uploadthing",
   ],
+  ignoredRoutes: ["/api/webhook/clerk", "/api/webhook/stripe"],
 });
 
 export const config = {
