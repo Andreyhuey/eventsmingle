@@ -1,5 +1,9 @@
 # WELCOME TO EVENTSMINLGLE
 
+###
+
+Temporarily stopped beacause of tasks at hand
+
 ## INTRODUCTION
 
 This is a FullStack Typescript Nextjs Event ticketing application
